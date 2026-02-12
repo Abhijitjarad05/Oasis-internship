@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f3f5;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 360px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.display {
+    width: 100%;
+    height: 70px;
+    border-radius: 12px;
+    background: #f7f7f7;
+    margin-bottom: 16px;
+    padding: 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #222;
+    overflow-x: auto;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    height: 60px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    background: #e9eaec;
+    color: #222;
+    transition: background 0.15s ease, transform 0.05s ease;
+}
+
+button:hover {
+    background: #dcdde0;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+.operator {
+    background: #d6e4ff;
+    color: #1a3d8f;
+}
+
+.operator:hover {
+    background: #c6d8ff;
+}
+
+.equals {
+    grid-column: span 2;
+    background: #4f7cff;
+    color: #ffffff;
+}
+
+.equals:hover {
+    background: #436ae0;
+}
+
+.clear {
+    background: #ffe1e1;
+    color: #8a1f1f;
+}
+
+.clear:hover {
+    background: #ffd1d1;
+}

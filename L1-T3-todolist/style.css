@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #1f4037, #99f2c8);
+    color: #222;
+    transition: 0.3s;
+}
+
+body.dark {
+    background: #121212;
+    color: #eee;
+}
+
+header {
+    background: #ffffff;
+    padding: 15px;
+    text-align: center;
+}
+
+body.dark header {
+    background: #1e1e1e;
+}
+
+.controls {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.controls input,
+.controls select,
+.controls button {
+    padding: 6px 10px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 300px 1fr 1fr;
+    gap: 20px;
+    padding: 30px;
+}
+
+.add-task,
+.task-section {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+body.dark .add-task,
+body.dark .task-section,
+body.dark .task {
+    background: #1e1e1e;
+}
+
+.add-task input,
+.add-task textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.add-task button {
+    width: 100%;
+    padding: 8px;
+    background: #28a745;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.task {
+    background: #fff;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    cursor: grab;
+}
+
+.task small {
+    display: block;
+    margin-top: 6px;
+    color: #666;
+}
+
+.task-actions {
+    margin-top: 8px;
+    display: flex;
+    gap: 6px;
+}
+
+.task-actions button {
+    padding: 5px 8px;
+    font-size: 0.8rem;
+    border: none;
+    cursor: pointer;
+}
+
+.complete-btn { background: #007bff; color: #fff; }
+.edit-btn { background: #ffc107; }
+.delete-btn { background: #dc3545; color: #fff; }
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}

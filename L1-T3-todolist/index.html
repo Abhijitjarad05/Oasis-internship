@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>To-Do List</h1>
+
+    <div class="controls">
+        <input type="text" id="search" placeholder="Search tasks">
+        <select id="filter">
+            <option value="all">All</option>
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
+        </select>
+        <button id="themeToggle">🌙</button>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="add-task">
+        <h2>Add Task</h2>
+        <input type="text" id="title" placeholder="Task title">
+        <textarea id="description" placeholder="Task description"></textarea>
+        <button id="addBtn">Add</button>
+    </section>
+
+    <section class="task-section" id="pendingSection">
+        <h2>Pending Tasks</h2>
+        <div id="pendingTasks" class="task-list"></div>
+    </section>
+
+    <section class="task-section" id="completedSection">
+        <h2>Completed Tasks</h2>
+        <div id="completedTasks" class="task-list"></div>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
